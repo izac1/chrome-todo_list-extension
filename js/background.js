@@ -21,7 +21,7 @@ function saveData(data){
 
 function check(){
 	window.setInterval(function(){
-		if(chrome.extension.getViews({ type: "popup" }).length > 0){
+		if(chrome.extension.getViews({ type: "popup" }).length === 0){
 			getDataFormDB(function(data){
 				if(data.taskarray.length > 0){
 					var nowDate = new Date().setMilliseconds(0);
