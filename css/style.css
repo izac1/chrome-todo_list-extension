@@ -1,0 +1,49 @@
+body{
+	width: 100%;
+	min-width: 400px;
+	height: 100%;
+	margin:0px 0px 0px 0px;
+}
+
+
+.add{
+	float: left;
+    width: 97%;
+    margin: 0px 5px 10px 5px;
+}
+
+.inp{
+	margin: 10px auto;
+}
+
+.inp input{
+	float:left;
+	width: 32.3333333%;
+}
+.inp input:not(:nth-child(1)){
+    margin-left: 0.4%;
+}
+.result{
+	float:left;
+
+}
+
+.result table{
+	width: 97%;
+    margin: 0 auto;
+    border-collapse:collapse;
+    margin: 0px 5px 10px 5px;
+}
+
+.result table th{
+	font-size: 16px;
+	text-align: center;
+	padding: 4px;
+	font-weight: normal;
+}
+
+.result table td{
+	font-size: 12px;
+	text-align: center;
+	padding: 4px;
+}
