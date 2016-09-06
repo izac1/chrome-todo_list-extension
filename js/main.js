@@ -29,6 +29,9 @@ function insert(data){
 
 function insertInTable(text,time){
 	$('table tr:last').after('<tr class="info"><td>1</td><td class="text">'+text+'</td><td class="time">'+time+'</td></tr>');
+	if(Date.parse(new Date()) >= createDate(time)){
+		$('table tr:last').addClass( "done" );
+	}
 };
 
 function sendTaskArray(port,arr){
@@ -51,4 +54,19 @@ function seticon(){
         path: 'icon2.png',
     });
 };
+
+function reverseDate(string){
+
+	var a=string.split('-');
+	return a[2]+"-"+a[1]+"-"+a[0];
+}
+
+function createDate(date){
+	var a = date.split(' ');
+	a[0] = reverseDate(a[0].split(".").join("-"));
+	//console.log(a);
+	return Date.parse(new Date(a[0]+" "+a[1]));
+}
+
+
 
